@@ -3,44 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taco Man</title>
+    <title>Steve's Mexican Journey</title>
     <style>
+        :root {
+            --primary: #2d6a4f;
+            --secondary: #95d5b2;
+            --bg: #f8f9fa;
+            --card: #ffffff;
+            --text: #1b4332;
+            --accent: #f77f00;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            text-align: center;
-            background-color: #ffffff;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(90deg, #006847 0%, #006847 33.33%, #ffffff 33.33%, #ffffff 66.66%, #ce1126 66.66%, #ce1126 100%);
+            color: var(--text);
+            line-height: 1.6;
         }
+
         header {
-            background-color: #a4b320;
-            color: #000000;
-            padding: 20px 0;
+            background: rgba(45, 106, 79, 0.95);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
         }
-        .content {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
+
+        header h1 {
+            margin: 0;
+            font-size: clamp(2rem, 4vw, 3rem);
         }
-        img {
-            max-width: 100%;
+
+        header p {
+            margin: 0.5rem auto 0;
+            max-width: 720px;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        main {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 2rem 1rem 3rem;
+        }
+
+        .section {
+            background: var(--card);
+            border-radius: 20px;
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .section h2 {
+            margin-top: 0;
+            color: var(--primary);
+        }
+
+        .facts {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        }
+
+        .fact {
+            background: var(--secondary);
+            color: #073b3a;
+            padding: 1rem;
+            border-radius: 16px;
+        }
+
+        .gallery {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        }
+
+        .gallery figure {
+            margin: 0;
+            overflow: hidden;
+            border-radius: 16px;
+            background: #fff;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .gallery img {
+            display: block;
+            width: 100%;
             height: auto;
-            border-radius: 8px;
+        }
+
+        .gallery figcaption {
+            padding: 0.75rem 1rem;
+            font-size: 0.95rem;
+            color: #3d5a3c;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            color: #495057;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 600px) {
+            .section {
+                padding: 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Steve is a Mexican
-        </h1>
+        <h1>Steve's Mexican Journey</h1>
+        <p>Celebrating Mexican culture, food, and stories with warmth, history, and a modern perspective.</p>
     </header>
-    <div class="content">
-        <p>This is a website about the life of a mexican.</p>
-                <p>"Burrito means Little Donkey"</p>
-                <p>"The longest taco ever made was 2466 feet long in Mexico"</p>
 
-        <img src="Taco man.jpg" alt="An image of a mexican lifestyle">
-        <img src="Softball to face.jpg" alt="When a taco hits the side of your face">
-    </div>
+    <main>
+        <section class="section">
+            <h2>About Steve</h2>
+            <p>Steve is exploring what Mexican heritage means today — from family traditions and food to local festivals and everyday life. This page shares a few fun facts and snapshots that highlight the pride and flavor of Mexican culture.</p>
+        </section>
+
+        <section class="section">
+            <h2>Fun Facts</h2>
+            <div class="facts">
+                <div class="fact">
+                    <strong>Burrito meaning</strong>
+                    <p>The word "burrito" translates to "little donkey" in Spanish, reflecting the bundle-like shape of the dish.</p>
+                </div>
+                <div class="fact">
+                    <strong>World record taco</strong>
+                    <p>The longest taco ever made measured 2,466 feet and was created in Mexico.</p>
+                </div>
+                <div class="fact">
+                    <strong>Cultural pride</strong>
+                    <p>Mexico is known for vibrant music, colorful festivals, and a rich culinary tradition that inspires people around the world.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <figure>
+                    <img src="Taco man.jpg" alt="A vibrant Mexican meal featuring tacos">
+                    <figcaption>Delicious tacos are a cherished part of daily life.</figcaption>
+                </figure>
+                <figure>
+                    <img src="Taco to the Face.jpg" alt="A smiling person enjoying a community event">
+                    <figcaption>Friendly gatherings and celebrations bring people together.</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Built with respect for Mexican culture and a focus on positive storytelling.</p>
+    </footer>
 </body>
 </html>
